@@ -1,0 +1,32 @@
+{
+  "name": "Escriptori al Núvol (KDE + Blender + Chrome)",
+  "image": "ghcr.io/maverick777l/escriptori:latest",
+  "hostRequirements": {
+    "cpus": 2,
+    "memory": "8gb",
+    "storage": "32gb"
+  },
+  "runArgs": ["--shm-size=2g"],
+  "secrets": {
+    "VNC_PASSWORD": {
+      "description": "OPCIONAL. Deixa-ho buit per entrar a l'escriptori sense contrasenya (només tu hi pots accedir amb el teu compte de GitHub). Si poses una contrasenya, es demanarà amb l'usuari 'admin'."
+    }
+  },
+  "postStartCommand": "escriptori",
+  "forwardPorts": [6080],
+  "portsAttributes": {
+    "6080": {
+      "label": "Escriptori Virtual",
+      "protocol": "http",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "otherPortsAttributes": {
+    "onAutoForward": "silent"
+  },
+  "customizations": {
+    "codespaces": {
+      "openFiles": ["README.md"]
+    }
+  }
+}
