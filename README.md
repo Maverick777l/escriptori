@@ -14,7 +14,7 @@
 
 <br>
 
-<a href="https://codespaces.new/Maverick777l/escriptori?quickstart=1">
+<a href="https://github.com/codespaces/new/Maverick777l/escriptori?quickstart=1">
   <img src="https://github.com/codespaces/badge.svg" alt="Obre l'escriptori a GitHub Codespaces" height="44">
 </a>
 
